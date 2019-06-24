@@ -1,0 +1,17 @@
+.clearfix {
+  @include clearfix;
+}
+
+.wrapper {
+  margin: 0 auto;
+  position: relative;
+  @media screen and (min-width: $desktop-medium + 1) {
+    max-width: $desktop-medium - 60;
+  }
+  @media screen and (max-width: $desktop-medium) {
+    padding: 0 30px;
+  }
+  @media screen and (max-width: $tablet-medium) {
+    padding: 0 15px;
+  }
+}

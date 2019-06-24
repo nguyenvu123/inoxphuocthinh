@@ -1,0 +1,84 @@
+{
+  "name": "frontend-boilerplate",
+  "version": "1.1.6",
+  "description": "Minimalist and ready to use frontEnd HTML5/CSS/JS Boilerplate for creating new web projects.",
+  "private": true,
+  "author": {
+    "name": "Fidesio",
+    "email": "hedi.benaba@fidesio.com",
+    "url": "https://www.fidesio.com/"
+  },
+  "cssnano": {
+    "preset": "advanced"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "browserslist": [
+    "last 8 versions",
+    "not ie <= 8",
+    "not unreleased versions"
+  ],
+  "scripts": {
+    "boilerplate": "node ./frontendboilerplate.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "~9.4.10",
+    "bourbon": "~5.1.0",
+    "browser-sync": "~2.26.3",
+    "bytes": "~3.1.0",
+    "chokidar": "~2.1.2",
+    "colors": "~1.3.3",
+    "commander": "~2.19.0",
+    "confirm-simple": "~1.0.3",
+    "datauri": "~1.1.0",
+    "emittery": "~0.4.1",
+    "fancy-log": "~1.3.3",
+    "favicons": "~5.3.0",
+    "fs-extra": "~7.0.1",
+    "github-markdown-css": "~3.0.1",
+    "glob": "~7.1.4",
+    "gutenberg-css": "~0.4.7",
+    "html-minifier": "~3.5.21",
+    "html-validator": "~3.1.3",
+    "image-size": "~0.7.2",
+    "imagemin": "~6.1.0",
+    "imagemin-gifsicle": "~6.0.1",
+    "imagemin-mozjpeg": "~8.0.0",
+    "imagemin-pngquant": "~7.0.0",
+    "imagemin-svgo": "~7.0.0",
+    "imagemin-webp": "~5.0.0",
+    "imagemin-zopfli": "~6.0.0",
+    "intersection-observer": "~0.5.1",
+    "jquery": "~3.3.1",
+    "jquery.resizeend": "~1.1.1",
+    "jshint": "~2.10.1",
+    "locale-code": "~2.0.2",
+    "lodash": "~4.17.11",
+    "minimist": "~1.2.0",
+    "modernizr": "~3.7.0",
+    "node-notifier": "~5.4.0",
+    "node-sass": "~4.11.0",
+    "node-sass-magic-importer": "~5.3.1",
+    "os": "~0.1.1",
+    "postcss": "~7.0.16",
+    "postcss-discard-comments": "~4.0.2",
+    "postcss-flexbugs-fixes": "~4.1.0",
+    "postcss-pxtorem": "~4.0.1",
+    "postcss-unprefix": "~2.1.4",
+    "prepend-file": "~1.3.1",
+    "pretty": "~2.0.0",
+    "prompt": "~1.0.0",
+    "remove-leading-slash": "~1.0.1",
+    "sass-lint": "~1.12.1",
+    "showdown": "~1.9.0",
+    "twig": "~1.13.3",
+    "uglify-js": "~3.4.9",
+    "upath": "~1.1.2",
+    "verge": "~1.10.2"
+  },
+  "dependencies": {}
+}

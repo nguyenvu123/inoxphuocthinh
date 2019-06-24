@@ -1,0 +1,66 @@
+/* Compiled final .css file destination, relative to root directory. */
+/* This variable must be filled. */
+$output_path: 'public/assets/css/main.css';
+
+/* Every asset (image or font) called with the url() statement from an imported node_modules/*.css stylesheet will be automatically base64 encoded according to this weight limit (in KB). */
+/* If this variable is omitted or set to 0, it won't do anything at all. */
+$auto_base64_node_modules_css_weight_limit: 5;
+
+/* Enable or disable automatic conversion from px to rem units. */
+$transformPxToRem_prod: true;
+$transformPxToRem_dev: false;
+
+@import 'global/variables';
+
+@import 'bourbon';
+@import 'global/mixins';
+
+//@font-face {
+//  font-family: 'fontello';
+//  src: url('../fonts/fontello/fontello.eot?#{$random}');
+//  src: url('../fonts/fontello/fontello.woff2?#{$random}') format('woff2'), // sass-lint:disable-line no-duplicate-properties
+//  url('../fonts/fontello/fontello.woff?#{$random}') format('woff'),
+//  url('../fonts/fontello/fontello.ttf?#{$random}') format('truetype'),
+//  url('../fonts/fontello/fontello.svg?#{$random}#fontello') format('svg');
+//  font-weight: normal;
+//  font-style: normal;
+//}
+
+@import '../core/scss/global/normalize';
+
+//slick.scss
+//@import '../../node_modules/slick-carousel/slick/slick.scss';
+
+//magnific-popup.css
+//@import '../../node_modules/magnific-popup/dist/magnific-popup';
+
+@import 'global/layout';
+@import 'global/global';
+
+@import 'blocks/**/*.scss';
+@import 'templates/**/*.scss';
+
+/*
+ /!\ REMINDER /!\
+
+ Use consistent media queries in the entire project.
+
+  @media screen and (min-width: $desktop-medium) {}
+  @media screen and (max-width: $desktop-medium) {}
+
+ If width = $desktop-medium, both rules will apply and this is not good.
+
+ Instead, do it this way :
+
+    @media screen and (min-width: $desktop-medium + 1) {}
+    @media screen and (max-width: $desktop-medium) {}
+
+ .. or this way :
+
+    @media screen and (min-width: $desktop-medium) {}
+    @media screen and (max-width: $desktop-medium - 1) {}
+
+  if you use media queries like that, you'll have to adapt variables.
+  We do not recommend this because it may become confusing when working on many projects.
+
+*/

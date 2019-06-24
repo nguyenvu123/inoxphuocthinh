@@ -1,0 +1,90 @@
+//============================================================
+// Forms
+//============================================================
+
+@mixin placeholder {
+  @at-root #{&}::-webkit-input-placeholder {
+    @content
+  }
+  @at-root #{&}:-moz-placeholder {
+    @content
+  }
+  @at-root #{&}::-moz-placeholder {
+    @content
+  }
+  @at-root #{&}:-ms-input-placeholder {
+    @content
+  }
+  @at-root #{&}::placeholder {
+    @content
+  }
+}
+
+/*
+input {
+  @include placeholder {
+    font-style:italic;
+  }
+}
+*/
+
+//============================================================
+// Typography
+//============================================================
+
+@mixin text-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/*
+p {
+  @include text-ellipsis;
+}
+*/
+
+//============================================================
+// Square root
+//============================================================
+
+@function sqrt($r) {
+  $x0: 1;
+  $x1: $x0;
+
+  @for $i from 1 through 10 {
+    $x1: $x0 - ($x0 * $x0 - abs($r)) / (2 * $x0);
+    $x0: $x1;
+  }
+
+  @return $x1;
+}
+
+/*
+div {
+  margin-top: 25 * sqrt(2) - 25px;
+  // Outputs : margin-top: 10.35533905932738px;
+}
+*/
+
+//============================================================
+// Fontello
+//============================================================
+
+@mixin fontello {
+  font-family: fontello;
+  letter-spacing: normal;
+  font-weight: 400;
+  font-style: normal;
+  text-decoration: none;
+  user-select: none;
+}
+
+/*
+&:before {
+  @include fontello;
+  content: '\E801';
+  font-size: 15px;
+}
+*/
+

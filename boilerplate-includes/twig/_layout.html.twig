@@ -1,0 +1,170 @@
+{#
+/**
+ * @file
+ *
+ * Available variables
+ * - project_name
+ * - project_short_name
+ * - css_files
+ * - js_files
+ * - html_files
+ * - favicon_url
+ * - img_url
+ * - lang_code
+ * - lang_code_extended
+ * - favicon_color
+ *
+ */
+#}
+
+{% set random = random(99999999999) %}
+{% set page_description = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.' %}
+
+<!DOCTYPE html><!--[if IE ]>
+<html class="ie {% block htmlclass %}{% endblock %}" lang="{{ lang_code }}"
+      dir="ltr">
+<![endif]-->
+<!--[if !(IE)]><! -->
+<html lang="{{ lang_code }}" dir="ltr" class="{% block htmlclass %}{% endblock %}">
+<!--<![endif]-->
+    <head>
+        {% block head %}
+            <script>var boilerplate_timer = Date.now();</script>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width,height=device-height,shrink-to-fit=no">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <meta name="google" content="notranslate">
+            <!--[if (IEMobile)]>
+            <meta http-equiv="cleartype" content="on">
+            <![endif]-->
+            {% block seo_meta %}
+                <meta name="robots" content="{% block robots %}noindex, nofollow{% endblock %}">
+                <title>{% block title %}{{ project_name }}{% endblock %}</title>
+                <meta name="description" content="{% block description %}{{ page_description }}{% endblock %}">
+                <!-- <link rel="canonical" href="http://google.fr/"/> -->
+                <!-- <link rel="alternate" href="http://google.com/" hreflang="en"/> -->
+            {% endblock %}
+            {% block social_meta %}
+                <meta name="og:type" content="website">
+                <meta name="og:title" content="{% block title %}{{ project_name }}{% endblock %}">
+                <meta name="og:site_name" content="{{ project_short_name }}">
+                <meta name="og:description" content="{% block description %}{{ page_description }}{% endblock %}">
+                <meta name="og:image" content="{{ img_url }}screenshot.png?{{ random }}">
+                <meta name="og:locale" content="{{ lang_code_extended }}">
+                <meta name="image" content="{{ img_url }}screenshot.png?{{ random }}">
+                <!-- <meta name="og:url" content="http://google.fr/"> -->
+                <!-- <meta name="fb:app_id" content="123456789"> -->
+                <!-- <meta name="google-site-verification" content="..."/> -->
+            {% endblock %}
+            <!--
+                Testing tool : https://search.google.com/structured-data/testing-tool
+                Documentation : https://developers.google.com/search/docs/data-types/corporate-contact
+            -->
+            <script type='application/ld+json'>
+                {
+                  "@context": "https://schema.org",
+                  "@type": "Organization",
+                  "@id": "http://my-website-url.com/#organization",
+                  "url": "http://my-organization-or-website-url.com/",
+                  "logo": "http://my-website-url.com/path/to/logo.png",
+                  "name": "Name of the organization",
+                  "sameAs": [
+                    "https://www.facebook.com/my-organization-facebook-page-url/",
+                    "https://www.instagram.com/my-organization-instagram-profile-url/",
+                    "https://www.youtube.com/channel/my-organization-youtube-channel-url/",
+                    "https://www.linkedin.com/company/my-organization-linkedin-profile-url/"
+                  ],
+                  "contactPoint": [{
+                    "@type": "ContactPoint",
+                    "telephone": "+33 6 76 76 76 76",
+                    "contactType": "customer service",
+                    "contactOption": [
+                      "HearingImpairedSupported",
+                      "TollFree"
+                    ],
+                    "areaServed": [
+                      "FR",
+                      "CHE",
+                      "BEL",
+                      "CA"
+                    ],
+                    "availableLanguage": [
+                      "French"
+                    ]
+                  }]
+                }
+            </script>
+            {% block favicons %}
+                {% if (favicon_url) %}
+                
+                    <link rel="apple-touch-icon" sizes="114x114" href="{{ favicon_url }}apple-touch-icon-114x114.png?{{ random }}">
+                    <link rel="apple-touch-icon" sizes="120x120" href="{{ favicon_url }}apple-touch-icon-120x120.png?{{ random }}">
+                    <link rel="apple-touch-icon" sizes="144x144" href="{{ favicon_url }}apple-touch-icon-144x144.png?{{ random }}">
+                    <link rel="apple-touch-icon" sizes="152x152" href="{{ favicon_url }}apple-touch-icon-152x152.png?{{ random }}">
+                    <link rel="apple-touch-icon" sizes="180x180" href="{{ favicon_url }}apple-touch-icon-180x180.png?{{ random }}">
+                    <link rel="apple-touch-icon" sizes="57x57" href="{{ favicon_url }}apple-touch-icon-57x57.png?{{ random }}">
+                    <link rel="apple-touch-icon" sizes="60x60" href="{{ favicon_url }}apple-touch-icon-60x60.png?{{ random }}">
+                    <link rel="apple-touch-icon" sizes="72x72" href="{{ favicon_url }}apple-touch-icon-72x72.png?{{ random }}">
+                    <link rel="apple-touch-icon" sizes="76x76" href="{{ favicon_url }}apple-touch-icon-76x76.png?{{ random }}">
+                    <link rel="apple-touch-startup-image" href="{{ favicon_url }}apple-touch-icon.png?{{ random }}">
+                    <link rel="icon" type="image/png" sizes="16x16" href="{{ favicon_url }}favicon-16x16.png?{{ random }}">
+                    <link rel="icon" type="image/png" sizes="228x228" href="{{ favicon_url }}coast-228x228.png?{{ random }}">
+                    <link rel="icon" type="image/png" sizes="32x32" href="{{ favicon_url }}favicon-32x32.png?{{ random }}">
+                    <link rel="manifest" href="{{ favicon_url }}manifest.json?{{ random }}">
+                    <link rel="shortcut icon" href="{{ favicon_url }}favicon.ico?{{ random }}">
+                    <link rel="yandex-tableau-widget" href="{{ favicon_url }}yandex-browser-manifest.json?{{ random }}">
+                    <meta name="msapplication-TileImage" content="{{ favicon_url }}mstile-144x144.png?{{ random }}">
+                    <meta name="msapplication-config" content="{{ favicon_url }}browserconfig.xml?{{ random }}">
+                    <meta name="theme-color" content="{{ favicon_color }}">
+                    <meta name="msapplication-TileColor" content="{{ favicon_color }}">
+                    <meta name="apple-mobile-web-app-capable" content="yes">
+                    <meta name="mobile-web-app-capable" content="yes">
+                    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+                    <meta name="apple-mobile-web-app-title" content="{{ project_short_name }}">
+                    <meta name="application-name" content="{{ project_short_name }}">
+                {% endif %}
+            {% endblock %}
+            {% block stylesheets %}
+                {% for css_file in css_files %}
+                    {% if css_file.filename == 'print' %}
+                        <script>
+                            /* It will add a <link rel="stylesheet"> element after page load. */
+                            /* It requires to enable the "load_print_css" option in boilerplate-includes/js/my-file.js */
+                            var boilerplate_print_css_url = '{{ css_file.url }}?{{ random }}';
+                        </script>
+                    {% else %}
+                    <link rel="stylesheet" href="{{ css_file.url }}?{{ random }}" type="text/css" media="not print"/>
+                    {% endif %}
+                {% endfor %}
+            {% endblock %}
+        {% endblock %}
+    </head>
+    <body class="{% block bodyclass %}{% endblock %}">
+        {% block header %}
+            <header id="header">
+
+             {% include '/blocks/_header.twig' %}
+            </header>
+        {% endblock %}
+        {% block main %}
+            {% block pre_content %}{% endblock %}
+            <main id="main-content">
+                <div class="wrapper clearfix">
+                    {% block content %}{% endblock %}
+                </div>
+            </main>
+            {% block post_content %}{% endblock %}
+        {% endblock %}
+        {% block footer %}
+            <footer id="footer"></footer>
+        {% endblock %}
+        {% block javascripts %}
+            {% for js_file in js_files %}
+                <script src="{{ js_file.url }}?{{ random }}" async></script>
+            {% endfor %}
+        {% endblock %}
+        {% block fonts %}
+            <!-- <link href="{{ 'https://fonts.googleapis.com/css?family=Lato:400,700,900|Roboto:400,500'|replace({'|': '|'|url_encode}) }}" rel="stylesheet"> -->
+        {% endblock %}
+    </body>
+</html>

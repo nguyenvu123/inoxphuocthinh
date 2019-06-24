@@ -1,0 +1,21 @@
+/* Compiled final .css file destination, relative to root directory. */
+/* This variable must be filled. */
+$output_path: 'public/assets/css/print.css';
+
+/* Every asset (image or font) called with the url() statement from an imported node_modules/*.css stylesheet will be automatically base64 encoded according to this weight limit (in KB). */
+/* If this variable is omitted or set to 0, it won't do anything at all. */
+$auto_base64_node_modules_css_weight_limit: 5;
+
+/* Enable or disable automatic conversion from px to rem units. */
+$transformPxToRem_prod: false;
+$transformPxToRem_dev: false;
+
+@import 'global/variables';
+
+@import 'bourbon';
+@import 'global/mixins';
+
+@import '../../node_modules/gutenberg-css/dist/gutenberg';
+@import '../../node_modules/gutenberg-css/dist/themes/oldstyle';
+//@import '../../node_modules/gutenberg-css/dist/themes/modern';
+//@import '../../node_modules/gutenberg-css/dist/themes/book';

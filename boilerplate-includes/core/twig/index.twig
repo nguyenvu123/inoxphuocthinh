@@ -1,0 +1,190 @@
+{#
+/**
+ * @file
+ *
+ * Available variables
+ * - project_name
+ * - project_short_name
+ * - css_files
+ * - html_files
+ * - js_files
+ * - js_code_demo
+ * - css_code_demo
+ * - css_print_code_demo
+ * - html_files
+ * - favicon_url
+ * - img_url
+ * - img_frontend_boilerplate_demo
+ * - lang_code
+ * - lang_code_extended
+ * - favicon_color
+ * - project_git_url
+ * - project_preview_links
+ * - project_other_links
+ *
+ */
+#}
+
+{% set random = random(99999999999) %}
+{% set page_description = 'This is the presentation page of the project. You can access to generated assets, useful links related to the project, check your current configuration as well as a lot of useful things!' %}
+<!DOCTYPE html><!--[if IE ]>
+<html class="ie" lang="{{ lang_code }}" dir="ltr">
+<![endif]-->
+<!--[if !(IE)]><! -->
+<html lang="{{ lang_code }}" dir="ltr">
+<!--<![endif]-->
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no,width=device-width,height=device-height,shrink-to-fit=no">
+    <meta name="robots" content="noindex, nofollow"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="google" content="notranslate"/>
+    <meta name="og:type" content="website">
+    <!--[if (IEMobile)]>
+    <meta http-equiv="cleartype" content="on">
+    <![endif]-->
+    <title>{{ project_name }}</title>
+    <meta name="og:title" content="{{ project_name }}">
+    <meta name="og:site_name" content="{{ project_short_name }}">
+    <meta name="description" content="{{ page_description }}">
+    <meta name="og:description" content="{{ page_description }}">
+    <meta name="image" content="{{ img_frontend_boilerplate_demo }}screenshot.png?{{ random }}">
+    <meta name="og:image" content="{{ img_frontend_boilerplate_demo }}screenshot.png?{{ random }}">
+    <meta name="og:locale" content="{{ lang_code_extended }}">
+    <link rel="apple-touch-icon" sizes="114x114"
+          href="{{ img_frontend_boilerplate_demo }}favicon/apple-touch-icon-114x114.png?{{ random }}">
+    <link rel="apple-touch-icon" sizes="120x120"
+          href="{{ img_frontend_boilerplate_demo }}favicon/apple-touch-icon-120x120.png?{{ random }}">
+    <link rel="apple-touch-icon" sizes="144x144"
+          href="{{ img_frontend_boilerplate_demo }}favicon/apple-touch-icon-144x144.png?{{ random }}">
+    <link rel="apple-touch-icon" sizes="152x152"
+          href="{{ img_frontend_boilerplate_demo }}favicon/apple-touch-icon-152x152.png?{{ random }}">
+    <link rel="apple-touch-icon" sizes="180x180"
+          href="{{ img_frontend_boilerplate_demo }}favicon/apple-touch-icon-180x180.png?{{ random }}">
+    <link rel="apple-touch-icon" sizes="57x57"
+          href="{{ img_frontend_boilerplate_demo }}favicon/apple-touch-icon-57x57.png?{{ random }}">
+    <link rel="apple-touch-icon" sizes="60x60"
+          href="{{ img_frontend_boilerplate_demo }}favicon/apple-touch-icon-60x60.png?{{ random }}">
+    <link rel="apple-touch-icon" sizes="72x72"
+          href="{{ img_frontend_boilerplate_demo }}favicon/apple-touch-icon-72x72.png?{{ random }}">
+    <link rel="apple-touch-icon" sizes="76x76"
+          href="{{ img_frontend_boilerplate_demo }}favicon/apple-touch-icon-76x76.png?{{ random }}">
+    <link rel="apple-touch-startup-image" href="{{ img_frontend_boilerplate_demo }}favicon/apple-touch-icon.png?{{ random }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ img_frontend_boilerplate_demo }}favicon/favicon-16x16.png?{{ random }}">
+    <link rel="icon" type="image/png" sizes="228x228" href="{{ img_frontend_boilerplate_demo }}favicon/coast-228x228.png?{{ random }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ img_frontend_boilerplate_demo }}favicon/favicon-32x32.png?{{ random }}">
+    <link rel="shortcut icon" href="{{ img_frontend_boilerplate_demo }}favicon/favicon.ico?{{ random }}">
+    <meta name="msapplication-TileImage" content="{{ img_frontend_boilerplate_demo }}favicon/mstile-144x144.png?{{ random }}">
+    <meta name="theme-color" content="{{ favicon_color }}">
+    <meta name="msapplication-TileColor" content="{{ favicon_color }}">
+    <meta name="apple-mobile-web-app-title" content="{{ project_short_name }}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="application-name" content="{{ project_short_name }}">
+    <style media="not print">
+        {{ css_code_demo }}
+    </style>
+    <style media="print">
+        {{ css_print_code_demo }}
+    </style>
+</head>
+<body>
+<nav id="main-menu">
+    <div class="wrapper">
+        <a href="./index.html" class="logo">
+            <h1 class="sitename">Frontend Boilerplate</h1>
+        </a>
+        <ul>
+            {% if project_preview_links %}
+                {% for key, link in project_preview_links %}
+                    <li>
+                        <a href="{{ link }}" target="_blank" rel="noopener"
+                           title="Open Preview ({{ key }}) in a new tab">{{ key }}</a>
+                    </li>
+                {% endfor %}
+            {% endif %}
+            {% if project_git_url %}
+                <li><a href="{{ project_git_url }}" target="_blank" title="Open Git repository in a new tab"
+                       rel="noopener">Git</a>
+                </li>
+            {% endif %}
+            <li class="preview-documentation">
+                <span class="iframe-open" data-src="./frontend-boilerplate-documentation/readme.html" title="View documentation"
+                      data-preview-title="Documentation">Documentation</span>
+            </li>
+        </ul>
+    </div>
+</nav>
+<header id="header">
+    <div class="highlight-informations">
+        <h2 class="project-name">{{ project_name }}</h2>
+        <p class="project-description">
+            This is the presentation page of the project.<br/>
+            You can access to generated assets, useful links related to the project, check your current configuration
+            as well as a lot of useful things!
+        </p>
+        {% if project_other_links %}
+            <ul class="project-links">
+                {% for key, link in project_other_links %}
+                    <li>
+                        <a href="{{ link }}" target="_blank" title="Open in a new tab" rel="noopener">{{ key }}</a>
+                    </li>
+                {% endfor %}
+            </ul>
+        {% endif %}
+    </div>
+</header>
+<main id="main-content">
+    <div class="project-files">
+        {% if html_files|length > 0 %}
+            <h3 class="category-name">Templates</h3>
+            {% for html_file in html_files %}
+                <div class="filecard html">
+                    <a class="filename" href="{{ html_file.url }}" title="Open {{ html_file.filename }}.html">
+                        <span class="bold">{{ html_file.filename }}</span>.html
+                    </a>
+                    <div class="panel-right">
+                        <button title="Preview this document" data-src="{{ html_file.url }}"
+                                class="preview panel-element iframe-open"></button>
+                        <a href="{{ html_file.url }}" title="Open {{ html_file.filename }}.html in a new tab"
+                           target="_blank" rel="noopener" class="newtab panel-element"></a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% if css_files|length > 0 %}
+            <h3 class="category-name">Stylesheets</h3>
+            {% for css_file in css_files %}
+                <div class="filecard css">
+                    <a class="filename" href="{{ css_file.url }}" title="Open {{ css_file.filename }}.css">
+                        <span class="bold">{{ css_file.filename }}</span>.css
+                    </a>
+                    <div class="panel-right">
+                        <a href="{{ css_file.url }}" title="Open {{ css_file.filename }}.css in a new tab"
+                           target="_blank" rel="noopener" class="newtab panel-element"></a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+        {% if js_files %}
+            <h3 class="category-name">Scripts</h3>
+            {% for js_file in js_files %}
+                <div class="filecard js">
+                    <a href="{{ js_file.url }}" title="Open {{ js_file.filename }}.js"
+                       class="filename"><span class="bold">{{ js_file.filename }}</span>.js</a>
+                    <div class="panel-right">
+                        <a href="{{ js_file.url }}" title="Open {{ js_file.filename }}.js in a new tab"
+                           target="_blank" rel="noopener" class="newtab panel-element"></a>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+</main>
+<script>
+    {{ js_code_demo }}
+</script>
+<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600,700" rel="stylesheet">
+</body>
+</html>

@@ -1,0 +1,29 @@
+{#
+/**
+ * @file
+ *
+ * Available variables
+ * - project_name
+ * - project_short_name
+ * - css_files
+ * - js_files
+ * - html_files
+ * - favicon_url
+ * - img_url
+ * - lang_code
+ * - lang_code_extended
+ * - favicon_color
+ *
+ */
+#}
+
+<a href="
+    mailto:contact@email.com
+    ?subject={{ ('Contact request from : \'' ~ project_short_name ~ '\'')|url_encode }}
+    &body={{ ('Hi, ')|url_encode }}
+    &cc=someoneelse@email.com, another@email.com
+    &bcc=lastperson@email.com
+">
+    contact@email.com
+</a>
+

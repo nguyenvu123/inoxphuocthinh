@@ -1,0 +1,14 @@
+body {
+  font-family: $font-1; //Default font family
+  color: $textcolor-1; //Default text color
+  letter-spacing: normal; //Default letter spacing
+  font-size: 16px; //Default font size
+  line-height: 1.15; //Default line height
+}
+
+html,
+body {
+  &.disableScroll {
+    overflow: hidden;
+  }
+}

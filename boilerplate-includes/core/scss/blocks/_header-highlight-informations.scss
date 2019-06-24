@@ -1,0 +1,109 @@
+#header {
+  position: relative;
+  padding: 100px 0 140px;
+  background-image: radial-gradient(ellipse farthest-corner at 20% 50%, #FD4B55 0%, #D93A3C 100%);
+  color: #fff;
+  @media screen and (max-width: $desktop-small) {
+    padding: 60px 0 140px;
+  }
+  .highlight-informations {
+    width: 100%;
+    max-width: 650px;
+    margin: 80px auto 0;
+    @media screen and (max-width: $tablet-medium) {
+      padding: 0 30px;
+    }
+    @media screen and (max-width: $tablet-small) {
+      padding: 0 15px;
+      margin-top: 50px;
+    }
+    .project-name {
+      font-size: 24px;
+      font-weight: 700;
+    }
+    .project-description {
+      margin-top: 20px;
+      font-size: 18px;
+      line-height: 1.4;
+    }
+    .project-links {
+      display: flex;
+      flex-wrap: wrap;
+      margin-top: 35px;
+      li {
+        position: relative;
+        background-color: #fff;
+        border-radius: 100px;
+        text-transform: uppercase;
+        font-size: 12px;
+        font-weight: 500;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+        margin-right: 10px;
+        margin-bottom: 10px;
+        color: $textcolor-1;
+        user-select: none;
+        a {
+          display: block;
+          padding: 13px 45px 13px 25px;
+        }
+        &:after {
+          content: '\e898';
+          position: absolute;
+          top: 50%;
+          right: 20px;
+          transform: translateY(-50%);
+          @include fontello;
+          transition: transform 0.3s ease-in-out;
+        }
+        &:hover,
+        &:active {
+          &:after {
+            transform: translateY(-50%) translateX(7px);
+          }
+        }
+        &:active {
+          transform: translateY(1px);
+          box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.2);
+        }
+      }
+    }
+  }
+  &:before,
+  &:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 200%;
+    height: 140px;
+    background-repeat: repeat-x;
+    background-position: 50% calc(100% + 7px);
+    background-size: 50%;
+  }
+  &:before {
+    animation: wave-1 30s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    background-image: url('frontend-boilerplate-documentation/images/wave1.svg');
+  }
+  &:after {
+    animation: wave-2 12s cubic-bezier(0.36, 0.45, 0.63, 0.53) infinite;
+    background-image: url('frontend-boilerplate-documentation/images/wave2.svg');
+  }
+}
+
+@keyframes wave-1 {
+  from {
+    transform: translate(0)
+  }
+  to {
+    transform: translate(-50%)
+  }
+}
+
+@keyframes wave-2 {
+  from {
+    transform: translate(-50%)
+  }
+  to {
+    transform: translate(0)
+  }
+}

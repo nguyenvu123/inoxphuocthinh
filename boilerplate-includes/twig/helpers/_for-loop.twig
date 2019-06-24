@@ -1,0 +1,24 @@
+{#
+/**
+ * @file
+ *
+ * Available variables
+ * - project_name
+ * - project_short_name
+ * - css_files
+ * - js_files
+ * - html_files
+ * - favicon_url
+ * - img_url
+ * - lang_code
+ * - lang_code_extended
+ * - favicon_color
+ *
+ */
+#}
+
+{# This <p> will be displayed 10 times #}
+{#https://twig.symfony.com/doc/2.x/tags/for.html#}
+{% for i in 0..10 %}
+    <p>I repeat myself 10 times!</p>
+{% endfor %}

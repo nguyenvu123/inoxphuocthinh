@@ -1,0 +1,57 @@
+{#
+/**
+ * @file
+ *
+ * Available variables
+ * - project_name
+ * - project_short_name
+ * - css_files
+ * - js_files
+ * - html_files
+ * - favicon_url
+ * - img_url
+ * - lang_code
+ * - lang_code_extended
+ * - favicon_color
+ *
+ */
+#}
+
+{# Compiled final .html file destination. #}
+{# Path must be relative to the directory set in your boilerplate-includes/frontendboilerplate-configuration.js #}
+{% set output_path = './home.html' %}
+
+{% extends '../_layout.html.twig' %}
+
+{% block htmlclass %}page-home-html{% endblock %}
+{% block bodyclass %}page-home-body{% endblock %}
+
+{% block title %}Home - {{ parent() }}{% endblock %}
+
+{% block pre_content %}
+    <!--
+    Include this snippet only on the frontpage.
+    Testing tool : https://search.google.com/structured-data/testing-tool
+    Documentation : https://developers.google.com/search/docs/data-types/sitelinks-searchbox
+    -->
+    <script type='application/ld+json'>
+        {
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "@id": "http://my-website-url.com/#website",
+          "url": "http://my-website-url.com/",
+          "name": "Name of the website",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": "http://my-website-url.com/?s={search_term_string}",
+            "query-input": "required name=search_term_string"
+          }
+        }
+    </script>
+{% endblock %}
+
+{% block content %}
+
+  {% include '../blocks/_homeBlockTop.twig' %}
+   
+{% endblock %}
