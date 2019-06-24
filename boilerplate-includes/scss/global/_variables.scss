@@ -9,10 +9,17 @@ $random: random(99999999999);
 //============================================================
 
 $desktop-medium: 1420px;
+$desktop-hd: 1280px;
 $desktop-small: 1024px;
+$tablet-large: 992px;
 $tablet-medium: 768px;
 $tablet-small: 480px;
 
+// ============================================================
+// Wrapper
+//============================================================
+$wrapper_w: 1240px;
+$row_left_right: 10px;
 //============================================================
 // Typography
 //============================================================
@@ -23,7 +30,12 @@ $font-1: sans-serif;
 // Colors
 //============================================================
 
-$textcolor-1: #000;
+$textcolor-1: #1E1E1E;
+$textcolor-hover: #d5d5d5;
+$maincolor: #1f82d3;
+$maincolor-dark: #2076bc;
+$maincolor-2: #009DDD;
+$maincolor-2-gradient-combination: #018BC3;
 
 $facebook-color: #3d5b99;
 $twitter-color: #1ea1f1;
@@ -33,6 +45,39 @@ $viadeo-color: #f07355;
 $pinterest-color: #bd081c;
 $google-plus-color: #df493a;
 
+$white: #fff;
+$dark: #000;
+$icon-color: #afafaf;
+$border-color: #BCBCBC;
+$border-color-2: #EBEBEB;
+
+$color1: #171717;
+$color2: #515151;
+$color3: #76AFDC;
+$color4: #EBEFF3;
+$color5: #464545;
+$color6: #EEEEF3;
+$color7: #060708;
+$color8: #888888;
+$color9: #bcbcbc;
+$color10: #1F82D2;
+$color11: #BCBCBC;
+$color12: #1D6FB2;
+$color13: #3E3E3E;
+$color14: #d2d2d2;
+$color15: #4C6073;
+$color16: #919191;
+$color17: #848484;
+$color18: #bebebe;
+$color19: #E6EAEE;
+$color20: #D0D1D2;
+$color21: #006699;
+$color22: #76afdc;
+$color23: #1D2832;
+$color24: #303F4C;
+$color25: #dbdbdb;
+$color26: #0C5087;
+$color27: #1B78C2;
 //============================================================
 // Easing
 //============================================================
@@ -76,3 +121,10 @@ $easeInOutSine: cubic-bezier(0.445, 0.050, 0.550, 0.950);
 $easeInBack: cubic-bezier(0.600, -0.280, 0.735, 0.045);
 $easeOutBack: cubic-bezier(0.175, 0.885, 0.320, 1.275);
 $easeInOutBack: cubic-bezier(0.680, -0.550, 0.265, 1.550);
+
+//================================
+//Google Font
+//================================
+$google-font: 'Martel Sans';
+$google-font-2: 'Open Sans';
+$google-font-3: 'Lora', serif;

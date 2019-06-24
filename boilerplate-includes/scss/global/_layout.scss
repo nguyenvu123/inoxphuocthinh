@@ -5,17 +5,66 @@
 .wrapper {
   margin: 0 auto;
   position: relative;
+  padding: 0 15px;
+  @media screen and (min-width: $desktop-small) {
+    padding: 0 $row_left_right;
+  }
   @media screen and (min-width: $desktop-medium + 1) {
-    max-width: $desktop-medium - 300;
-  }
-  @media screen and (max-width: $desktop-medium) {
-    padding: 0 30px;
-  }
-  @media screen and (max-width: $tablet-medium) {
-    padding: 0 15px;
+    max-width: $wrapper_w;
   }
 }
 
 #main-content {
+  position: relative;
+}
+.row {
+  position: relative;
+  margin-left: -$row_left_right;
+  margin-right: -$row_left_right;
+  @include flex();
+  @include clearfix;
+}
+
+.col {
+  @for $i from 1 through 12 {
+    &-#{$i} {
+      //flex: 100%;
+      padding: 0 $row_left_right;
+      position: relative;
+      @include clearfix;
+      @media screen and (min-width: $tablet-medium) {
+        //flex: 100% / 12 * $i;
+        flex: 0 0 (100% / 12 * $i);
+        max-width: 100% / 12 * $i;
+      }
+    }
+    &-md-#{$i}{
+      //flex: 100%;
+      flex-basis: 100%;
+      padding: 0 $row_left_right;
+      position: relative;
+      @include clearfix;
+      @media screen and (min-width: $desktop-small) {
+        //flex: 100% / 12 * $i;
+        flex: 0 0 (100% / 12 * $i);
+        max-width: 100% / 12 * $i;
+      }
+    }
+    &-lg-#{$i}{
+      //flex: 100%;
+      padding: 0 $row_left_right;
+      position: relative;
+      @include clearfix;
+      @media screen and (min-width: $desktop-hd) {
+        //flex: 100% / 12 * $i;
+        flex: 0 0 (100% / 12 * $i);
+        max-width: 100% / 12 * $i;
+      }
+    }
+  }
+}
+
+.flexbox{
+  @include flex();
   position: relative;
 }

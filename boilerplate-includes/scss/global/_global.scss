@@ -1,7 +1,132 @@
+body,html {
+  margin: 0;
+  padding: 0;
+}
+* {
+  box-sizing: border-box;
+}
 body {
-  font-family: $font-1; //Default font family
+  font-family: $google-font; //Default font family
   color: $textcolor-1; //Default text color
   letter-spacing: normal; //Default letter spacing
   font-size: 16px; //Default font size
   line-height: 1.15; //Default line height
+  min-height: 100%;
+}
+.title{
+  &-box{
+    padding-left:10px;
+    padding-right: 10px;
+    margin-bottom: 35px;
+    text-align: center;
+    position: relative;
+    @include clearfix;
+    @media screen and(min-width: $desktop-hd) {
+      padding-left: 0;
+      padding-right: 0;
+      text-align: left;
+      margin-bottom: 0;
+    }
+    .btn-abs{
+      float: right;
+      @media screen and(min-width: $desktop-hd) {
+        float: none;
+        padding: 16px 24px 12px 73px;
+        min-width: 184px;
+        position: absolute;
+        right: 10px;
+        top: -60px;
+      }
+    }
+  }
+  &-text{
+    text-transform: uppercase;
+    color: $textcolor-1;
+    font-family: $google-font;
+    font-size: 18px;
+    font-weight: 900;
+    letter-spacing: 2.4px;
+    line-height: 36px;
+    display: block;
+    @media screen and(min-width: $desktop-hd) {
+      margin-left: 22px;
+      display: inline-block;
+    }
+  }
+  &-line{
+    width: 50px;
+    height: 1px;
+    background-color: $border-color;
+    content: ' ';
+    position: absolute;
+    left: 0;
+    top: 20px;
+    //vertical-align: middle;
+    display: none;
+    @media screen and(min-width: $desktop-hd){
+      display: inline-block;
+      position: relative;
+      top: -5px;
+      width: calc(100% - 1022px - ((100% - 1200px) / 2));
+    }
+    &_under{
+      min-width: 132px;
+      text-align: center;
+      max-width: 100%;
+      text-transform: uppercase;
+      font-family: $google-font;
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 2px;
+      line-height: 36px;
+      position: relative;
+      &:after{
+        display: block;
+        content: '';
+        width: 56px;
+        max-width: 100%;
+        margin:0 auto;
+        height: 1px;
+        background-color: $border-color;
+      }
+    }
+  }
+}
+.bg{
+  &-brown{
+    background-color: $color4;
+  }
+  &-dark{
+    background-color: $textcolor-1;
+    color: $white;
+  }
+  &-gray{
+    background-color: $color15;
+  }
+}
+.text{
+  &-center{
+    text-align: center;
+  }
+  &-uppercase{
+    text-transform: uppercase;
+  }
+}
+.clearfix{
+  @include clearfix();
+}
+.hidden{
+  &-sm{
+    @media screen and(max-width: $desktop-small){
+      display: none;
+    }
+  }
+}
+
+.visible{
+  &-sm{
+    @media screen and(min-width: $desktop-hd){
+      display: none;
+    }
+  }
 }
