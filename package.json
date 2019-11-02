@@ -57,7 +57,7 @@
     "jquery.resizeend": "~1.1.1",
     "jshint": "~2.10.1",
     "locale-code": "~2.0.2",
-    "lodash": "~4.17.11",
+    "lodash": "~4.17.13",
     "minimist": "~1.2.0",
     "modernizr": "~3.7.0",
     "node-notifier": "~5.4.0",
