@@ -64,7 +64,7 @@
     "node-sass": "~4.11.0",
     "node-sass-magic-importer": "~5.3.1",
     "os": "~0.1.1",
-    "postcss": "~7.0.16",
+    "postcss": "~8.2.10",
     "postcss-discard-comments": "~4.0.2",
     "postcss-flexbugs-fixes": "~4.1.0",
     "postcss-pxtorem": "~4.0.1",
